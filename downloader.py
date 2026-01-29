@@ -6,6 +6,7 @@ def get_video_info(url):
         'quiet': True,
         'no_warnings': True,
         'cookiefile': 'cookies.txt' if os.path.exists('cookies.txt') else None,
+        'extractor_args': {'youtube': {'player_client': ['ios']}},
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         try:
@@ -26,6 +27,7 @@ def download_video(url, format_id, output_path='downloads'):
         'quiet': True,
         'no_warnings': True,
         'cookiefile': 'cookies.txt' if os.path.exists('cookies.txt') else None,
+        'extractor_args': {'youtube': {'player_client': ['ios']}},
     }
     
     if format_id == 'audio':
