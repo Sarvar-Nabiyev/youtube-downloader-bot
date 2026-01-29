@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+.env
+.DS_Store
+*.exp
+youtube_downloader/
+cookies.txt

@@ -1,0 +1,12 @@
+[Unit]
+Description=YouTube Downloader Telegram Bot
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/youtube_bot
+ExecStart=/root/youtube_bot/venv/bin/python bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
